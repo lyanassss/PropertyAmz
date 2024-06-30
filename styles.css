@@ -1,16 +1,26 @@
+/* CSS Variables for the new color palette */
+:root {
+  --ash-gray: #ADB5AA;
+  --battleship-gray: #6E817A;
+  --myrtle-green: #446F6F;
+  --dun: #D5C4AF;
+  --battleship-gray-2: #8E8878;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Open Sauce', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #F4F1DE;
-  color: #3D405B;
+  background-color: var(--ash-gray);
+  color: var(--battleship-gray);
 }
 
 header {
-  background-color: #81B29A;
-  padding: 1rem;
+  background-color: var(--myrtle-green);
   text-align: center;
   position: relative;
+  color: white;
+  padding: 0;
 }
 
 header img {
@@ -18,42 +28,67 @@ header img {
   height: auto;
 }
 
+.header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.header-content h1 {
+  font-family: 'Catchy Mager', Arial, sans-serif;
+  font-size: 3rem;
+  margin: 0;
+}
+
+nav {
+  background-color: var(--dun);
+  padding: 1rem 0;
+}
+
 nav ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
 }
 
 nav ul li {
   display: inline;
-  margin: 0 1rem;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
+  font-size: 1.2rem;
 }
 
 section {
-  padding: 2rem;
-  margin: 1rem;
+  padding: 4rem 2rem;
+  margin: 1rem 0;
   border-radius: 0.5rem;
 }
 
 #about {
-  background-color: #F2CC8F;
+  background-color: var(--dun);
 }
 
 #listings {
-  background-color: #E07A5F;
+  background-color: var(--myrtle-green);
+  color: white;
 }
 
 #contact {
-  background-color: #81B29A;
+  background-color: var(--battleship-gray);
+  color: white;
 }
 
 .property-card {
-  background-color: #F4F1DE;
-  color: #3D405B;
+  background-color: white;
+  color: var(--battleship-gray-2);
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 0.5rem;
@@ -71,19 +106,19 @@ section {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  color: #090909;
+  color: var(--battleship-gray);
   padding: 0.5em 1.5em;
   cursor: pointer;
   font-size: 16px;
   border-radius: 0.5em;
-  background: #e8e8e8;
-  border: 1px solid #e8e8e8;
-  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  background: var(--dun);
+  border: 1px solid var(--dun);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1), -6px -6px 12px rgba(255, 255, 255, 0.5);
 }
 
 .book-button:active {
-  color: #666;
-  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+  color: var(--battleship-gray-2);
+  box-shadow: inset 4px 4px 12px rgba(0, 0, 0, 0.1), inset -4px -4px 12px rgba(255, 255, 255, 0.5);
 }
 
 .book-button:before {
@@ -109,7 +144,7 @@ section {
   top: 180%;
   width: 160%;
   height: 190%;
-  background-color: #009087;
+  background-color: var(--battleship-gray);
   border-radius: 50%;
   display: block;
   transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
@@ -118,18 +153,18 @@ section {
 
 .book-button:hover {
   color: #ffffff;
-  border: 1px solid #009087;
+  border: 1px solid var(--battleship-gray);
 }
 
 .book-button:hover:before {
   top: -35%;
-  background-color: #009087;
+  background-color: var(--battleship-gray);
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 
 .book-button:hover:after {
   top: -45%;
-  background-color: #009087;
+  background-color: var(--battleship-gray);
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 
@@ -142,7 +177,7 @@ section {
 }
 
 .lang-switch button {
-  background-color: #3D405B;
+  background-color: var(--battleship-gray-2);
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -152,11 +187,11 @@ section {
 }
 
 .lang-switch button:hover {
-  background-color: #81B29A;
+  background-color: var(--myrtle-green);
 }
 
 footer {
-  background-color: #3D405B;
+  background-color: var(--battleship-gray);
   color: white;
   text-align: center;
   padding: 1rem;
