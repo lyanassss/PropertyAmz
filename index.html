@@ -9,56 +9,43 @@
 </head>
 <body>
     <header>
-        <img src="header-image.png" alt="PropertyAmz Header" id="header-image">
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Chat</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Property Listings</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="about">
+        <div class="header-content">
+            <img src="images/header.png" alt="Header Image" id="header-image">
             <h1>PropertyAmz</h1>
-            <p>Let's find your perfect place together!</p>
-            <p>At PropertyAmz, we're passionate about making real estate easy. Since 2019, we've been helping people find their dream homes with honesty and care. Our mission is simple: to provide you with the best real estate experience possible. Trust, transparency, and your satisfaction are our top priorities.</p>
-        </section>
-
-        <section id="listings">
-            <h2>Property Listings</h2>
-            <div class="property-card" data-name="234 Talensville Lane" data-details="4 Beds 3 Baths 2 Cars">
-                <h3>HOUSE FOR RENT</h3>
-                <p>234 Talensville Lane</p>
-                <p>4 Beds 3 Baths 2 Cars</p>
-                <button class="button2 book-button">Book</button>
-            </div>
-            <div class="property-card" data-name="56 Goulcrest Drive" data-details="3 Beds 2 Baths 1 Car">
-                <h3>HOUSE FOR RENT</h3>
-                <p>56 Goulcrest Drive</p>
-                <p>3 Beds 2 Baths 1 Car</p>
-                <button class="button2 book-button">Book</button>
-            </div>
-            <!-- Add more property cards as needed -->
-        </section>
-
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Office Hours: Monday to Friday, 9:00 am to 6:00 pm; Saturday, 9:00 am to 12 noon; Sunday by appointment only.</p>
-            <p>123 Anywhere St., Any City, ST 12345</p>
-            <p>(123) 456-7890</p>
-            <p><a href="mailto:hello@reallygreatsite.com">hello@reallygreatsite.com</a></p>
-        </section>
-    </main>
-
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#listings">Listings</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to PropertyAmz, your gateway to the finest properties in Malaysia. Explore our listings to find your dream home.</p>
+    </section>
+    <section id="listings">
+        <h2>Property Listings</h2>
+        <div class="property-card" data-name="Example Property 1" data-details="Example details for Property 1">
+            <h3>Example Property 1</h3>
+            <p>Details about the property.</p>
+            <button class="book-button">Book Now</button>
+        </div>
+        <div class="property-card" data-name="Example Property 2" data-details="Example details for Property 2">
+            <h3>Example Property 2</h3>
+            <p>Details about the property.</p>
+            <button class="book-button">Book Now</button>
+        </div>
+        <!-- Add more property cards as needed -->
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>For inquiries, please contact us at <a href="mailto:info@propertyamz.com">info@propertyamz.com</a></p>
+    </section>
     <footer>
-        <p>Get Social</p>
-        <!-- Social Media Links -->
+        <p>&copy; 2024 PropertyAmz. All rights reserved.</p>
     </footer>
-
     <div class="lang-switch">
         <button id="eng">ENG</button>
         <button id="malay">MALAY</button>
