@@ -3,53 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PropertyAmz</title>
+    <title>Real Estate</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script defer src="scripts.js"></script>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <img src="images/header.png" alt="Header Image" id="header-image">
-            <h1>PropertyAmz</h1>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#"><img src="images/logo4.png" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact-us">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#property-listing">Property Listing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>     
+
+    <section id="about-us" class="about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 text-center">
+                    <div class="about-us-content">
+                        <h2>About Us</h2>
+                        <p>At PropertyAmz, we're passionate about making real estate easy. Since 2019, we've been helping people find their dream homes with honesty and care.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#listings">Listings</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Welcome to PropertyAmz, your gateway to the finest properties in Malaysia. Explore our listings to find your dream home.</p>
     </section>
-    <section id="listings">
-        <h2>Property Listings</h2>
-        <div class="property-card" data-name="Example Property 1" data-details="Example details for Property 1">
-            <h3>Example Property 1</h3>
-            <p>Details about the property.</p>
-            <button class="book-button">Book Now</button>
+
+    <section id="property-listing" class="property-listing">
+        <div class="container">
+            <h2 class="text-center">Property Listings</h2>
+            <div class="filter-section">
+                <div class="row">
+                    <div class="col-md-6">
+                        <select id="locationDropdown" class="form-control">
+                            <option value="">Select Location</option>
+                            <!-- Options will be populated dynamically -->
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <select id="serviceDropdown" class="form-control">
+                            <option value="buying">Buying</option>
+                            <option value="renting">Renting</option>
+                            <option value="leasing">Leasing</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="propertyCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" id="propertyCarouselInner">
+                    <!-- Property cards will be dynamically loaded here -->
+                </div>
+                <a class="carousel-control-prev" href="#propertyCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#propertyCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+                <ol class="carousel-indicators" id="propertyCarouselIndicators"></ol>
+            </div>
         </div>
-        <div class="property-card" data-name="Example Property 2" data-details="Example details for Property 2">
-            <h3>Example Property 2</h3>
-            <p>Details about the property.</p>
-            <button class="book-button">Book Now</button>
+    </section>
+    
+    <section id="contact-us" class="contact-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 text-center">
+                    <div class="contact-us-content">
+                        <h2>Contact Us</h2>
+                        <p>Got questions? We're here to help! Reach out to PropertyAmz. Let's talk about your real estate goals.</p>
+                        <button class="btn btn-primary">Contact Us</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Add more property cards as needed -->
+    </section>  
+    
+    <section id="services" class="services">
+        <div class="container">
+            <div class="services-content text-center">
+                <h2>Services</h2>
+                <p>From buying advice to property management, we offer everything you need to navigate the real estate journey confidently.</p>
+                <button class="btn btn-primary">Learn More</button>
+            </div>
+        </div>
     </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>For inquiries, please contact us at <a href="mailto:info@propertyamz.com">info@propertyamz.com</a></p>
-    </section>
-    <footer>
-        <p>&copy; 2024 PropertyAmz. All rights reserved.</p>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p>Real Estate &copy; 2024. All rights reserved.</p>
+        </div>
     </footer>
-    <div class="lang-switch">
-        <button id="eng">ENG</button>
-        <button id="malay">MALAY</button>
+
+    <div class="language-switch">
+        <button id="eng" class="btn btn-secondary">ENG</button>
+        <button id="malay" class="btn btn-secondary">MALAY</button>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
